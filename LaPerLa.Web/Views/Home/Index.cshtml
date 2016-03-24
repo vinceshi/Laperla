@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "主页";
+}
+@section style{
+    <link type="text/css" mce_bogus="1" href="@Url.Content("~/Content/css/laperla.css")" rel="stylesheet"/>
+}
+@section header{
+    <!--footer-->
+    @Html.Partial("Header")
+}
+@model LaPerLa.Web.Models.HomeModel
+@if (Model.DistrictList != null && Model.DistrictList.Count > 0 && Model.ShopList != null && Model.ShopList.Count > 0)
+{
+    var currentShopList = Model.ShopList.Where(p => p.DistrictId == Model.DistrictList[0].DistrictId).ToList();
+    <div class="container">
+        <div class="frame clearfix">
+            <div id="divDistrict" class="accordion span3 place-left margin10">
+                <div class="accordion-frame">
+                    <a class="heading active collapsed dropdown-toggle without-icon" style="content: none" href="#" data-action="none">地区&nbsp;:&nbsp;<span>@Model.DistrictList[0].State</span>&nbsp;@(Html.Raw(Model.DistrictList.Count > 1 ? "<i class=\"icon-arrow-down-5\"></i>" : ""))</a>
+                    <input type="hidden" id="hidDistrict" value="@Model.DistrictList[0].DistrictId" />
+                    @if (Model.DistrictList.Count > 1)
+                    {
+                        <ul class="dropdown-menu light" data-role="dropdown">
+                            @foreach (var district in Model.DistrictList)
+                            {
+                                <li><a data-data="@district.DistrictId">@district.State</a></li>
+                            }
+                        </ul>
+                    }
+                </div>
+            </div>
+            @if (currentShopList.Count > 0)
+            {
+                <div id="divShop" class="accordion span3 place-left margin10">
+                    <div class="accordion-frame">
+                        <a class="heading active collapsed dropdown-toggle without-icon" style="content: none" href="#" data-action="none">店名&nbsp;:&nbsp;<span>@currentShopList[0].ShopName</span>&nbsp;@(Html.Raw(currentShopList.Count > 1 ? "<i class=\"icon-arrow-down-5\"></i>" : ""))</a>
+                        <input type="hidden" id="hidShop" value="@currentShopList[0].ShopId" />
+                        @if (currentShopList.Count > 1)
+                        {
+                            <ul class="dropdown-menu light" data-role="dropdown">
+                                @foreach (var shop in currentShopList)
+                                {
+                                    <li><a data-data="@shop.ShopId">@shop.ShopName</a></li>
+                                }
+                            </ul>
+                        }
+                    </div>
+                </div>     
+            }
+
+            <div id="divMonth" class="accordion span3 place-left margin10">
+                <div class="accordion-frame">
+                    <a class="heading active collapsed dropdown-toggle without-icon" style="content: none" href="#" data-action="none">月份&nbsp;:&nbsp;<span>@DateTime.Now.AddMonths(-1).ToString("yyyy-MM")</span>&nbsp;<i class="icon-arrow-down-5"></i></a>
+                    <ul class="dropdown-menu light" data-role="dropdown">
+                        <input type="hidden" id="hidMonth" value="@DateTime.Now.AddMonths(-1).ToString("yyyy-MM")" />
+                        @for (var i = 1; i < 7; i++)
+                        {
+                            <li><a>@DateTime.Now.AddMonths(-i).ToString("yyyy-MM")</a></li>
+                        }
+                    </ul>
+
+                </div>
+            </div>
+            <div class="accordion span2 place-left margin10">
+                <button class="fluent-button large" data-tag="statistics"><span class="icon-enter"></span>&nbsp;确定</button>
+            </div>
+            <div class="accordion span2 place-right margin10">
+                <button class="fluent-button large" data-tag="excel"><span class="icon-file-excel"></span>&nbsp;下载Excel</button>
+            </div>
+        </div>
+        <div class="row" data-tag="container">
+        </div>
+    </div>
+}
+
+
+@section script{
+    <script src="@Url.Content("~/Scripts/index.js")" type="text/javascript"></script>
+}
+@section footer{
+    <!--footer-->
+    @Html.Partial("Footer")
+}
+
+

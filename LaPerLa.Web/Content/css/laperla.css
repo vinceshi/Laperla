@@ -1,0 +1,13 @@
+﻿.foot {
+    text-align: center;
+}
+
+table th.nowrap {
+    white-space: nowrap;
+    vertical-align: middle !important; 
+}
+
+table td.nowrap {
+    white-space: nowrap;
+    vertical-align: middle !important; 
+}

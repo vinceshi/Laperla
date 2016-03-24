@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="LaPerLa.Model"
+                   namespace="LaPerLa.Model">
+  <class name="EmployeeInfo">
+    <id name="EmployeeId">
+      <generator class="identity" />
+    </id>
+    <property name="ChineseName" />
+    <property name="EnglishName" />
+    <property name="PositionId" />
+    <property name="ShopId" />
+  </class>
+</hibernate-mapping>

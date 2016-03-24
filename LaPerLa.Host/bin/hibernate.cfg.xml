@@ -1,0 +1,9 @@
+﻿<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+  <session-factory name="NHibernate.Test">
+    <property name="connection.driver_class">NHibernate.Driver.MySqlDataDriver</property>
+    <property name="connection.connection_string">
+      Database=laperla;Data Source=tangniemysql.mysql.rds.aliyuncs.com;User Id=vinceshi;Password=123456
+    </property>
+    <property name="dialect">NHibernate.Dialect.MySQLDialect</property>
+  </session-factory>
+</hibernate-configuration>

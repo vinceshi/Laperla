@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="LaPerLa.Model"
+                   namespace="LaPerLa.Model">
+  <class name="ShopInfo">
+    <id name="ShopId">
+      <generator class="identity" />
+    </id>
+    <property name="ShopName" />
+    <property name="ShopType" />
+    <property name="Target" />
+    <property name="ActualSalesWithTax" />
+    <property name="Tax" />
+    <property name="ActualSalesWithoutTax" />
+    <property name="ShopPool" />
+    <property name="Month" />
+    <property name="DistrictId" />
+  </class>
+</hibernate-mapping>

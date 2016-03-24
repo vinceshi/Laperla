@@ -1,0 +1,172 @@
+﻿@using LaPerLa.Web.LaPerLaService;
+@using LaPerLa.Utility;
+@model LaPerLa.Web.Models.StatisticsModel
+@if (Model != null && Model.District != null && Model.Shop != null && Model.EmployeeList != null && Model.EmployeeList.Count > 0)
+{
+    Position position = null;
+    Rule shopPoolCommissionType = null;
+    Rule cityPoolType = null;
+    Rule individualTarget_DiscountPrice = null;
+    Rule individualTarget_FullPrice = null;
+    double totleStatics = 0.0;
+    List<ShopSale> shopSaleList = null;
+
+    if (Model.ShopDict != null && Model.ShopDict.ContainsKey(Model.Shop.ShopId))
+    {
+        shopSaleList = Model.ShopDict[Model.Shop.ShopId].OrderBy(p=>p.Week).ToList();
+    }
+    <h5>@(Model.Shop.ShopName) commission for the Month</h5>
+    <table class="table hovered bordered">
+        <thead>
+            <tr>
+                <th class="text-center nowrap" rowspan=2 style="width:100px">Staff</th>
+                <th class="text-center nowrap" rowspan=2>Position</th>
+                <th class="text-center nowrap">Shop Pool Commission</th>
+                <th class="text-center nowrap">City Pool</th>
+                <th class="text-center nowrap" rowspan=2>Individual Target (Discount Price)</th>
+                <th class="text-center nowrap" rowspan=2>Individual Target (Full Price)</th>
+                @if (shopSaleList != null && shopSaleList.Count > 0)
+                {
+                    <th class="text-center nowrap" colspan="@shopSaleList.Count">Individual Weekly</th>
+                    <th class="text-center nowrap" colspan="@shopSaleList.Count">Shop Pool Weekly</th>
+                }
+                <th class="text-center nowrap" rowspan=2>Total</th>
+                <th class="text-center nowrap" rowspan=2>Commissions to be Paid</th>
+            </tr>
+            <tr>
+                <th class="text-center nowrap">Below 80%</th>
+                <th class="text-center nowrap">Below 90%</th>
+                @if (shopSaleList != null && shopSaleList.Count > 0)
+                {
+                    foreach (var shopSale in shopSaleList)
+                    { 
+                        <th class="text-center nowrap">@string.Format("Week{0}", shopSale.Week)</th>
+                    }
+                    foreach (var shopSale in shopSaleList)
+                    { 
+                        <th class="text-center nowrap">@string.Format("Week{0}", shopSale.Week)</th>
+                    }
+                }
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var employee in Model.EmployeeList)
+            {
+                double totle = 0.0;
+                List<Rule> individualWeeklyTypeList = null;
+                List<Rule> shopPoolWeeklyList = null;
+                if (Model.PositionList != null && Model.PositionList.Count > 0)
+                {
+                    position = Model.PositionList.FirstOrDefault(p => p.PositionId == employee.PositionId);
+                }
+                if (Model.Bonus != null && Model.Bonus.EmployeeRule != null)
+                {
+                    if (Model.Bonus.EmployeeRule.ContainsKey(employee.EmployeeId))
+                    {
+                        
+                        var employeeRule = Model.Bonus.EmployeeRule[employee.EmployeeId];
+
+                        if (employeeRule.ContainsKey(RuleType.ShopPoolCommissionType))
+                        {
+                            var shopPoolCommissionTypeList = employeeRule[RuleType.ShopPoolCommissionType];
+                            if (shopPoolCommissionTypeList != null && shopPoolCommissionTypeList.Count > 0)
+                            {
+                                shopPoolCommissionType = shopPoolCommissionTypeList[0];
+                                totle += shopPoolCommissionType.Bonus;
+                            }
+                        }
+                        if (employeeRule.ContainsKey(RuleType.CityPoolType))
+                        {
+                            var cityPoolTypeList = employeeRule[RuleType.CityPoolType];
+                            if (cityPoolTypeList != null && cityPoolTypeList.Count > 0)
+                            {
+                                cityPoolType = cityPoolTypeList[0];
+                                totle += cityPoolType.Bonus;
+                            }
+                        }
+                        if (employeeRule.ContainsKey(RuleType.IndividualTargetDiscountType))
+                        {
+                            var individualTarget_DiscountPriceList = employeeRule[RuleType.IndividualTargetDiscountType];
+                            if (individualTarget_DiscountPriceList != null && individualTarget_DiscountPriceList.Count > 0)
+                            {
+                                individualTarget_DiscountPrice = individualTarget_DiscountPriceList[0];
+                                totle += individualTarget_DiscountPrice.Bonus;
+                            }
+                        }
+                        if (employeeRule.ContainsKey(RuleType.IndividualTargetFullType))
+                        {
+                            var individualTarget_FullPriceList = employeeRule[RuleType.IndividualTargetFullType];
+                            if (individualTarget_FullPriceList != null && individualTarget_FullPriceList.Count > 0)
+                            {
+                                individualTarget_FullPrice = individualTarget_FullPriceList[0];
+                                totle += individualTarget_FullPrice.Bonus;
+                            }
+                        }
+                        if (employeeRule.ContainsKey(RuleType.IndividualWeeklyType))
+                        {
+                            individualWeeklyTypeList = employeeRule[RuleType.IndividualWeeklyType];
+                           
+                        }
+                        if (employeeRule.ContainsKey(RuleType.ShopPoolWeeklyType))
+                        {
+                            shopPoolWeeklyList = employeeRule[RuleType.ShopPoolWeeklyType];
+                        }
+                    }
+                    
+                }
+                <tr>
+                    <th class="text-center nowrap">@employee.EnglishName</th>
+                    <th class="text-center nowrap">@(position != null ? position.PositionName : "-")</th>
+                    <th class="text-center nowrap">@(shopPoolCommissionType != null && shopPoolCommissionType.Bonus > 0 ? String.Format("{0:N}", shopPoolCommissionType.Bonus) : "-")</th>
+                    <th class="text-center nowrap">@(cityPoolType != null && cityPoolType.Bonus > 0 ? String.Format("{0:N}", cityPoolType.Bonus) : "-")</th>
+                    <th class="text-center nowrap">@(individualTarget_DiscountPrice != null && individualTarget_DiscountPrice.Bonus > 0 ? String.Format("{0:N}", individualTarget_DiscountPrice.Bonus) : "-")</th>
+                    <th class="text-center nowrap">@(individualTarget_FullPrice != null && individualTarget_FullPrice.Bonus > 0 ? String.Format("{0:N}", individualTarget_FullPrice.Bonus) : "-")</th>
+                    @if (shopSaleList != null && individualWeeklyTypeList != null && individualWeeklyTypeList.Count > 0)
+                    {
+                        foreach (var individualWeekly in individualWeeklyTypeList)
+                        {
+                            totle += individualWeekly.Bonus;
+                            <th class="text-center nowrap">@(individualWeekly != null && individualWeekly.Bonus > 0 ? String.Format("{0:N}", individualWeekly.Bonus) : "-")</th> 
+                        }
+                    }
+                    @if (shopSaleList != null && shopPoolWeeklyList != null && shopPoolWeeklyList.Count > 0)
+                    {
+                        foreach (var shopPoolWeekly in shopPoolWeeklyList)
+                        {
+                            totle += shopPoolWeekly.Bonus;
+                            <th class="text-center nowrap">@(shopPoolWeekly != null && shopPoolWeekly.Bonus > 0 ? String.Format("{0:N}", shopPoolWeekly.Bonus) : "-")</th> 
+                        }
+                    }
+                    <th class="text-center nowrap">@(totle > 0 ? String.Format("{0:N}", totle) : "-")</th>
+                    <th class="text-center nowrap">@(totle > 0 ? String.Format("{0:N}", totle) : "-")</th>
+                </tr>
+                totleStatics += totle;
+            }
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                @if (shopSaleList != null && shopSaleList.Count > 0)
+                {
+                    foreach (var shopSale in shopSaleList)
+                    { 
+                        <th class="text-center"></th>
+                    }
+                    foreach (var shopSale in shopSaleList)
+                    { 
+                        <th class="text-center"></th>
+                    }
+                }
+                <th class="text-center"></th>
+                <th class="text-center">@(totleStatics > 0 ? String.Format("{0:N}", totleStatics) : "-")</th>
+            </tr>
+        </tfoot>
+    </table>
+}

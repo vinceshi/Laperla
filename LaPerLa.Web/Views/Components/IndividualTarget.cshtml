@@ -1,0 +1,37 @@
+﻿@using LaPerLa.Web.LaPerLaService;
+@using LaPerLa.Utility;
+@model LaPerLa.Web.Models.StatisticsModel
+@if (Model != null && Model.District != null && Model.Shop != null && Model.EmployeeList != null && Model.EmployeeList.Count > 0 && Model.EmployeeSaleList != null && Model.EmployeeSaleList.Count > 0)
+{
+    <h3>Workings:</h3>
+    <h5>* Individual Target</h5>
+    <table class="table hovered bordered">
+        <thead>
+            <tr>
+                <th class="text-left"></th>
+                <th class="text-left">Target</th>
+                <th class="text-left">Actual (Net amount)-Full Price</th>
+                <th class="text-left"></th>
+                <th class="text-left">Actual (Net amount)-Discount Price</th>
+                <th class="text-left"></th>
+                <th class="text-left">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model.EmployeeList)
+            {
+                var totleTargetSale = Model.EmployeeSaleList.Where(p => p.EmployeeId == employee.EmployeeId).Sum(p => p.TargetSale);
+                var totleActualSale = Model.EmployeeSaleList.Where(p => p.EmployeeId == employee.EmployeeId).Sum(p => p.ActualSale);
+                <tr>
+                    <th class="text-left">@employee.EnglishName</th>
+                    <th class="text-left">@(totleTargetSale > 0 ? String.Format("{0:N}", totleTargetSale) : "-")</th>
+                    <th class="text-left">@(totleActualSale > 0 ? String.Format("{0:N}", totleActualSale) : "-")</th>
+                    <th class="text-left">@(totleActualSale > 0 ? String.Format("{0:N}%", (totleActualSale/totleTargetSale)*100) : "0.00%")</th>
+                    <th class="text-left">-</th>
+                    <th class="text-left">0.00%</th>
+                    <th class="text-left">@(totleActualSale > 0 ? String.Format("{0:N}%", (totleActualSale/totleTargetSale)*100) : "0.00%")</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

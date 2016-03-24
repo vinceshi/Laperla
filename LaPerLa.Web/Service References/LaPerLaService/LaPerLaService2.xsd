@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:4941/LaPerLaService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="District">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistrictId" type="xs:long" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="District" nillable="true" type="tns:District" />
+  <xs:complexType name="ArrayOfDistrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="District" nillable="true" type="tns:District" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDistrict" nillable="true" type="tns:ArrayOfDistrict" />
+  <xs:complexType name="Position">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DistrictId" type="xs:long" />
+      <xs:element minOccurs="0" name="PositionId" type="xs:long" />
+      <xs:element minOccurs="0" name="PositionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShopId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Position" nillable="true" type="tns:Position" />
+  <xs:complexType name="ArrayOfPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Position" nillable="true" type="tns:Position" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPosition" nillable="true" type="tns:ArrayOfPosition" />
+  <xs:complexType name="Employee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChineseName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeId" type="xs:long" />
+      <xs:element minOccurs="0" name="EnglishName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PositionId" type="xs:long" />
+      <xs:element minOccurs="0" name="ShopId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Employee" nillable="true" type="tns:Employee" />
+  <xs:complexType name="ArrayOfEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployee" nillable="true" type="tns:ArrayOfEmployee" />
+  <xs:complexType name="EmployeeSale">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualSale" type="xs:double" />
+      <xs:element minOccurs="0" name="Days" type="xs:int" />
+      <xs:element minOccurs="0" name="EmployeeId" type="xs:long" />
+      <xs:element minOccurs="0" name="EmployeeSaleId" type="xs:long" />
+      <xs:element minOccurs="0" name="Month" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sale" type="xs:double" />
+      <xs:element minOccurs="0" name="ShopId" type="xs:long" />
+      <xs:element minOccurs="0" name="TargetSale" type="xs:double" />
+      <xs:element minOccurs="0" name="Week" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmployeeSale" nillable="true" type="tns:EmployeeSale" />
+  <xs:complexType name="ArrayOfEmployeeSale">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeSale" nillable="true" type="tns:EmployeeSale" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeSale" nillable="true" type="tns:ArrayOfEmployeeSale" />
+  <xs:complexType name="EmployeeTypeSale">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Actual" type="xs:double" />
+      <xs:element minOccurs="0" name="EmployeeId" type="xs:long" />
+      <xs:element minOccurs="0" name="EmployeeTypeSaleId" type="xs:long" />
+      <xs:element minOccurs="0" name="Month" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaleType" type="xs:int" />
+      <xs:element minOccurs="0" name="ShopId" type="xs:long" />
+      <xs:element minOccurs="0" name="Target" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmployeeTypeSale" nillable="true" type="tns:EmployeeTypeSale" />
+  <xs:complexType name="Shop">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DistrictId" type="xs:long" />
+      <xs:element minOccurs="0" name="ShopId" type="xs:long" />
+      <xs:element minOccurs="0" name="ShopName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShopType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Shop" nillable="true" type="tns:Shop" />
+  <xs:complexType name="ArrayOfShop">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Shop" nillable="true" type="tns:Shop" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShop" nillable="true" type="tns:ArrayOfShop" />
+  <xs:complexType name="Bonus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CityPool" type="xs:double" />
+      <xs:element minOccurs="0" name="DistrictId" type="xs:long" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EmployeeRule" nillable="true" type="q1:ArrayOfKeyValueOflongArrayOfKeyValueOflongArrayOfRuleG6mArm_Pety7Ep6D1" />
+      <xs:element minOccurs="0" name="ShopId" type="xs:long" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ShopSaleList" nillable="true" type="q2:ArrayOfKeyValueOflongShopSaleG6mArm_Pe" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bonus" nillable="true" type="tns:Bonus" />
+  <xs:complexType name="ArrayOfRule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Rule" nillable="true" type="tns:Rule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRule" nillable="true" type="tns:ArrayOfRule" />
+  <xs:complexType name="Rule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bonus" type="xs:double" />
+      <xs:element minOccurs="0" name="OperationMaxValue" type="xs:double" />
+      <xs:element minOccurs="0" name="OperationMinValue" type="xs:double" />
+      <xs:element minOccurs="0" name="OperationType" type="xs:int" />
+      <xs:element minOccurs="0" name="OperationValue" type="xs:double" />
+      <xs:element minOccurs="0" name="PositionId" type="xs:long" />
+      <xs:element minOccurs="0" name="RuleDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RuleId" type="xs:long" />
+      <xs:element minOccurs="0" name="RuleOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="RuleType" type="xs:int" />
+      <xs:element minOccurs="0" name="ShopId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rule" nillable="true" type="tns:Rule" />
+  <xs:complexType name="ShopSale">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualSalesWithTax" type="xs:double" />
+      <xs:element minOccurs="0" name="ActualSalesWithoutTax" type="xs:double" />
+      <xs:element minOccurs="0" name="ActualWeekSale" type="xs:double" />
+      <xs:element minOccurs="0" name="DistrictId" type="xs:long" />
+      <xs:element minOccurs="0" name="Month" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShopId" type="xs:long" />
+      <xs:element minOccurs="0" name="ShopPool" type="xs:double" />
+      <xs:element minOccurs="0" name="ShopSaleId" type="xs:long" />
+      <xs:element minOccurs="0" name="Target" type="xs:double" />
+      <xs:element minOccurs="0" name="TargetWeekSale" type="xs:double" />
+      <xs:element minOccurs="0" name="Tax" type="xs:double" />
+      <xs:element minOccurs="0" name="Week" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShopSale" nillable="true" type="tns:ShopSale" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LastLoginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:long" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfShopSale">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShopSale" nillable="true" type="tns:ShopSale" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShopSale" nillable="true" type="tns:ArrayOfShopSale" />
+</xs:schema>

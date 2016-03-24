@@ -1,0 +1,4 @@
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\bin\Debug\LaPerLa.BusinessModel.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\bin\Debug\LaPerLa.BusinessModel.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\obj\Debug\LaPerLa.BusinessModel.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\obj\Debug\LaPerLa.BusinessModel.pdb

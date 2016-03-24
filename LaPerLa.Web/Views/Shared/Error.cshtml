@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "出错啦！";
+ }
+    <div class="container error404">
+        <div class="offset2 span6 well">
+           <span></span>
+           <p>@ViewBag.ErrorMsg</p>
+           <a href="@Url.Action("Index","User")">点击返回</a>
+        </div>
+    </div>

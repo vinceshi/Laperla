@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b65680b6-3515-44ab-8d66-a15bda533694" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://121.40.95.150:7878/LaPerLaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LaPerLaService1.disco" MetadataType="Disco" ID="25723ca8-7861-4031-a719-943520cbe5aa" SourceId="1" SourceUrl="http://121.40.95.150:7878/LaPerLaService.svc?disco" />
+    <MetadataFile FileName="LaPerLaService1.wsdl" MetadataType="Wsdl" ID="4f523c7e-08ce-4400-96ae-e647d4f83de7" SourceId="1" SourceUrl="http://121.40.95.150:7878/LaPerLaService.svc?wsdl" />
+    <MetadataFile FileName="LaPerLaService4.xsd" MetadataType="Schema" ID="70921caa-213c-4972-a27f-7f4453f39189" SourceId="1" SourceUrl="http://121.40.95.150:7878/LaPerLaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LaPerLaService41.xsd" MetadataType="Schema" ID="db2ebae7-46bb-4441-852a-919ef7f741e9" SourceId="1" SourceUrl="http://121.40.95.150:7878/LaPerLaService.svc?xsd=xsd3" />
+    <MetadataFile FileName="LaPerLaService42.xsd" MetadataType="Schema" ID="2e3a340c-5f05-4718-9706-d59473a1871f" SourceId="1" SourceUrl="http://121.40.95.150:7878/LaPerLaService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LaPerLaService43.xsd" MetadataType="Schema" ID="1a87a8b8-f851-44e2-8722-5283c600bce9" SourceId="1" SourceUrl="http://121.40.95.150:7878/LaPerLaService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

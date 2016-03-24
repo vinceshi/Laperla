@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LaPerLaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:4941/LaPerLaService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:4941/LaPerLaService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4941/LaPerLaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" />
+      <xsd:import schemaLocation="http://localhost:4941/LaPerLaService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_AddDisctrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDisctrict" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddDisctrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDisctrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_QueryAllDistricts_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllDistricts" />
+  </wsdl:message>
+  <wsdl:message name="IService_QueryAllDistricts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllDistrictsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPosition" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetEmployeesByShopId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeesByShopId" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetEmployeesByShopId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeesByShopIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddEmployeeSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeSale" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddEmployeeSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeSaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetEmployeeSalesByEmployeeIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeSalesByEmployeeIds" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetEmployeeSalesByEmployeeIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeSalesByEmployeeIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddEmployeeTypeSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeTypeSale" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddEmployeeTypeSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeTypeSaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddShop_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddShop" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddShop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddShopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetShopsByDistrictId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShopsByDistrictId" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetShopsByDistrictId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShopsByDistrictIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CaculateBonus_InputMessage">
+    <wsdl:part name="parameters" element="tns:CaculateBonus" />
+  </wsdl:message>
+  <wsdl:message name="IService_CaculateBonus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CaculateBonusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_NewShopCopy_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewShopCopy" />
+  </wsdl:message>
+  <wsdl:message name="IService_NewShopCopy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewShopCopyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IService_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRule" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddShopSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddShopSale" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddShopSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddShopSaleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="AddDisctrict">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDistrict/AddDisctrict" message="tns:IService_AddDisctrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDistrict/AddDisctrictResponse" message="tns:IService_AddDisctrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllDistricts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDistrict/QueryAllDistricts" message="tns:IService_QueryAllDistricts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDistrict/QueryAllDistrictsResponse" message="tns:IService_QueryAllDistricts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/AddPosition" message="tns:IService_AddPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/AddPositionResponse" message="tns:IService_AddPosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployee/AddEmployee" message="tns:IService_AddEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployee/AddEmployeeResponse" message="tns:IService_AddEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesByShopId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployee/GetEmployeesByShopId" message="tns:IService_GetEmployeesByShopId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployee/GetEmployeesByShopIdResponse" message="tns:IService_GetEmployeesByShopId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployeeSale">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeSale/AddEmployeeSale" message="tns:IService_AddEmployeeSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeSale/AddEmployeeSaleResponse" message="tns:IService_AddEmployeeSale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeSalesByEmployeeIds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeSale/GetEmployeeSalesByEmployeeIds" message="tns:IService_GetEmployeeSalesByEmployeeIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeSale/GetEmployeeSalesByEmployeeIdsResponse" message="tns:IService_GetEmployeeSalesByEmployeeIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployeeTypeSale">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeSale/AddEmployeeTypeSale" message="tns:IService_AddEmployeeTypeSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeSale/AddEmployeeTypeSaleResponse" message="tns:IService_AddEmployeeTypeSale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddShop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShop/AddShop" message="tns:IService_AddShop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShop/AddShopResponse" message="tns:IService_AddShop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShopsByDistrictId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShop/GetShopsByDistrictId" message="tns:IService_GetShopsByDistrictId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShop/GetShopsByDistrictIdResponse" message="tns:IService_GetShopsByDistrictId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CaculateBonus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShop/CaculateBonus" message="tns:IService_CaculateBonus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShop/CaculateBonusResponse" message="tns:IService_CaculateBonus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewShopCopy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShop/NewShopCopy" message="tns:IService_NewShopCopy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShop/NewShopCopyResponse" message="tns:IService_NewShopCopy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Login" message="tns:IService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/LoginResponse" message="tns:IService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Logout" message="tns:IService_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/LogoutResponse" message="tns:IService_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRule/AddRule" message="tns:IService_AddRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRule/AddRuleResponse" message="tns:IService_AddRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddShopSale">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShopSale/AddShopSale" message="tns:IService_AddShopSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShopSale/AddShopSaleResponse" message="tns:IService_AddShopSale_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddDisctrict">
+      <soap:operation soapAction="http://tempuri.org/IDistrict/AddDisctrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllDistricts">
+      <soap:operation soapAction="http://tempuri.org/IDistrict/QueryAllDistricts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPosition">
+      <soap:operation soapAction="http://tempuri.org/IPosition/AddPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <soap:operation soapAction="http://tempuri.org/IEmployee/AddEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesByShopId">
+      <soap:operation soapAction="http://tempuri.org/IEmployee/GetEmployeesByShopId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployeeSale">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeSale/AddEmployeeSale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeSalesByEmployeeIds">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeSale/GetEmployeeSalesByEmployeeIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployeeTypeSale">
+      <soap:operation soapAction="http://tempuri.org/IEmployeeSale/AddEmployeeTypeSale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddShop">
+      <soap:operation soapAction="http://tempuri.org/IShop/AddShop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShopsByDistrictId">
+      <soap:operation soapAction="http://tempuri.org/IShop/GetShopsByDistrictId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CaculateBonus">
+      <soap:operation soapAction="http://tempuri.org/IShop/CaculateBonus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewShopCopy">
+      <soap:operation soapAction="http://tempuri.org/IShop/NewShopCopy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IUser/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://tempuri.org/IUser/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRule">
+      <soap:operation soapAction="http://tempuri.org/IRule/AddRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddShopSale">
+      <soap:operation soapAction="http://tempuri.org/IShopSale/AddShopSale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LaPerLaService">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost:4941/LaPerLaService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

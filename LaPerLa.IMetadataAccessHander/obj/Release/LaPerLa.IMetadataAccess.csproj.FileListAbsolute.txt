@@ -1,0 +1,7 @@
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.IMetadataAccessHander\bin\Release\LaPerLa.IMetadataAccess.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.IMetadataAccessHander\bin\Release\LaPerLa.IMetadataAccess.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.IMetadataAccessHander\bin\Release\LaPerLa.Model.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.IMetadataAccessHander\bin\Release\LaPerLa.Model.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.IMetadataAccessHander\obj\Release\LaPerLa.IMetadataAccess.csprojResolveAssemblyReference.cache
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.IMetadataAccessHander\obj\Release\LaPerLa.IMetadataAccess.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.IMetadataAccessHander\obj\Release\LaPerLa.IMetadataAccess.pdb

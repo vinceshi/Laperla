@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv ="X-UA-Compatible" content ="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title> 
+    @*<link href="@Url.Content("~/Content/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />*@
+    <link href="@Url.Content("~/Plugin/Metro/css/metro-bootstrap.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/Plugin/Metro/css/metro-bootstrap-responsive.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/Plugin/Metro/css/iconFont.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/Plugin/Metro/css/docs.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/Content/css/laperla.css")" rel="stylesheet" type="text/css" />
+    @RenderSection("style", false)
+    <!--[if lt IE 9]><script type="text/javascript" src="@Url.Content("~/Scripts/fe_html5.js")"></script><![endif]-->
+</head>
+<body class="metro">
+    <!--header-->
+    @RenderSection("header", false)
+    @RenderBody()
+    <script src="@Url.Content("~/Scripts/jquery.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.widget.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Plugin/Metro/js/metro.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Plugin/Metro/js/metro-dropdown.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Global.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/laperla.js")" type="text/javascript"></script>
+    @RenderSection("script", false)
+    @RenderSection("footer", false)
+</body>
+</html>

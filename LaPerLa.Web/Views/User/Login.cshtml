@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "登录";
+    }
+
+
+    <div class="container">
+        <div class="jumbotron">
+            <p>Do you homework, So Login First</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 panel">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input type="text" class="form-control" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="text" class="form-control" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-7">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        Remember me
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <button class="btn btn-default">登录 <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="min-height: 250px">
+    </div>
+@section script{
+    <script type="text/javascript">
+        var toUrl = "@Html.Raw(ViewBag.ToUrl)";
+        function postLogin() {
+            var userName = $("#txtUserName").val();
+            var password = $("#txtPassword").val();
+            if ($.trim(userName) == '' || $.trim(password) == '') {
+                showTip("用户名或密码不能为空", 1);
+                return;
+            }
+            if (password.length < 6) {
+                showTip("密码长度不能少于6位", 1);
+                return;
+            }
+            var rqData = "UserName=" + userName;
+            rqData += "&Password=" + password;
+            showLoading("正在登录...");
+            $.ajax({
+                type: "POST",
+                data: rqData,
+                url: "@(Url.Action("PostLogin", "User"))",
+                success: function (res) {
+                    if (res != null && res != "") {
+                        if (res.IsSuccess == 1) {
+                            if (toUrl == "") {
+                                gotoUrl("@(Url.Action("Index", "User"))");
+                            }
+                            else {
+                                gotoUrl(toUrl);
+                            }
+                        }
+                        else {
+                            showTip(res.error);
+                        }
+                    }
+                    hideLoading();
+                }
+            });
+        }
+
+    </script>
+    }
+@section footer{
+    <!--footer-->
+    @Html.Partial("Footer")
+    }
+
+

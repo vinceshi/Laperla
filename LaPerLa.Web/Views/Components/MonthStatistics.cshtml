@@ -1,0 +1,39 @@
+﻿@using LaPerLa.Web.LaPerLaService;
+@model LaPerLa.Web.Models.StatisticsModel
+@if (Model != null && Model.District != null && Model.ShopList != null && Model.ShopList.Count > 0 && Model.EmployeeSaleList != null && Model.EmployeeSaleList.Count > 0)
+{
+    List<ShopSale> shopSaleList = null;
+    <h4>@string.Format("Month of:{0}月", DateTime.Now.AddMonths(-1).Month)</h4>
+    <table class="table hovered bordered">
+        <thead>
+            <tr>
+                <th class="text-left"></th>
+                <th class="text-left">Target</th>
+                <th class="text-left">Actual sales with Tax</th>
+                <th class="text-left">Tax $</th>
+                <th class="text-left">Actual sales Without Tax</th>
+                <th class="text-left"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var shop in Model.ShopList)
+            {
+                if (Model.ShopDict != null && Model.ShopDict.Count > 0)
+                {
+                    if (Model.ShopDict.ContainsKey(shop.ShopId))
+                    {
+                        shopSaleList = Model.ShopDict[shop.ShopId];
+                    }
+                }
+                <tr>
+                    <th class="text-left">@shop.ShopName</th>
+                    <th class="text-left">@(shopSaleList.Count == 0 ? "-" : string.Format("${0:N}", shopSaleList[0].Target))</th>
+                    <th class="text-left">@(shopSaleList.Count == 0 ? "-" : string.Format("${0:N}", shopSaleList[0].ActualSalesWithTax))</th>
+                    <th class="text-left">@(shopSaleList.Count == 0 ? "-" : string.Format("${0:N}", shopSaleList[0].Tax))</th>
+                    <th class="text-left">@(shopSaleList.Count == 0 ? "-" : string.Format("${0:N}", shopSaleList[0].ActualSalesWithoutTax))</th>
+                    <th class="text-left">@(shopSaleList.Count == 0 ? "0.00%" : string.Format("{0:N}%", (shopSaleList[0].ActualSalesWithTax/shopSaleList[0].Target)*100))</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

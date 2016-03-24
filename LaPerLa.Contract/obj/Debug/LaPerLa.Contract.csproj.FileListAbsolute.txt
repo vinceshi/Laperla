@@ -1,0 +1,7 @@
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\bin\Debug\LaPerLa.Contract.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\bin\Debug\LaPerLa.Contract.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\bin\Debug\LaPerLa.BusinessModel.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\bin\Debug\LaPerLa.BusinessModel.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\obj\Debug\LaPerLa.Contract.csprojResolveAssemblyReference.cache
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\obj\Debug\LaPerLa.Contract.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\obj\Debug\LaPerLa.Contract.pdb

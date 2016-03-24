@@ -1,0 +1,17 @@
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\LaPerLa.DataAccess.EF.dll.config
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\LaPerLa.DataAccess.EF.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\LaPerLa.DataAccess.EF.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\EntityFramework.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\EntityFramework.SqlServer.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\LaPerLa.IMetadataAccess.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\LaPerLa.Model.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\LaPerLa.Utility.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\log4net.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\LaPerLa.BusinessModel.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\LaPerLa.IMetadataAccess.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\LaPerLa.Model.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\LaPerLa.Utility.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\bin\Debug\LaPerLa.BusinessModel.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\obj\Debug\LaPerLa.DataAccess.EF.csprojResolveAssemblyReference.cache
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\obj\Debug\LaPerLa.DataAccess.EF.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.DataAccess.EF\obj\Debug\LaPerLa.DataAccess.EF.pdb

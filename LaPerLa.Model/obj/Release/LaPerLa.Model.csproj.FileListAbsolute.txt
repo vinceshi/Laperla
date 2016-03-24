@@ -1,0 +1,5 @@
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Model\bin\Release\LaPerLa.Model.dll.config
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Model\bin\Release\LaPerLa.Model.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Model\bin\Release\LaPerLa.Model.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Model\obj\Release\LaPerLa.Model.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Model\obj\Release\LaPerLa.Model.pdb

@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "导入数据";
+}
+@section style{
+
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+    <link rel="stylesheet" href="@Url.Content("~/Plugin/jQueryUpload/css/jquery.fileupload.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Plugin/jQueryUpload/css/jquery.fileupload-ui.css")">
+    <!-- CSS adjustments for browsers with JavaScript disabled -->
+    <noscript>
+        <link rel="stylesheet" href="@Url.Content("~/Plugin/jQueryUpload/css/jquery.fileupload-noscript.css")">
+    </noscript>
+    <noscript>
+        <link rel="stylesheet" href="@Url.Content("~/Plugin/jQueryUpload/css/jquery.fileupload-ui-noscript.css")">
+    </noscript>
+}
+@section header{
+    <!--footer-->
+    @Html.Partial("Header")
+}
+<div class="container grid">
+
+        <div class="row">
+            <div class="span7">
+                <button class="large fileinput-button margin10 primary">
+                    <i class="icon-upload-3 on-left"></i><span>上传Excel</span>
+                    <input id="fileupload" type="file" name="files[]" multiple />
+                </button>
+            </div>
+        </div>
+        <!-- The global progress bar -->
+    <div id="progress" class="progress">
+        <div class="progress-bar progress-bar-success"></div>
+    </div>
+    <!-- The container for the uploaded files -->
+    <div id="files" class="files"></div>
+    
+
+</div>
+
+@section script{
+
+    <script src="@Url.Content("~/Plugin/jQueryUpload/js/jquery.iframe-transport.js")"></script>
+    <script src="@Url.Content("~/Plugin/jQueryUpload/js/jquery.fileupload.js")"></script>
+    <script>
+        /*jslint unparam: true */
+        /*global window, $ */
+        $(function () {
+            'use strict';
+            // Change this to the location of your server-side upload handler:
+
+            $('#fileupload').fileupload({
+                url: "/import/Upload",
+                dataType: 'json',
+                done: function (e, data) {
+                    $.each(data.result.files, function (index, file) {
+                        $('<p/>').text(file.name).appendTo('#files');
+                    });
+                },
+                progressall: function (e, data) {
+                    var progress = parseInt(data.loaded / data.total * 100, 10);
+                    $('#progress .progress-bar').css(
+                        'width',
+                        progress + '%'
+                    );
+                }
+            }).prop('disabled', !$.support.fileInput)
+                .parent().addClass($.support.fileInput ? undefined : 'disabled');
+        });
+    </script>
+
+
+}
+@section footer{
+    <!--footer-->
+    @Html.Partial("Footer")
+}

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://121.40.95.150:7878/LaPerLaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" />
+  <xs:import schemaLocation="http://121.40.95.150:7878/LaPerLaService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="AddDisctrict">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="info" nillable="true" type="q1:District" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDisctrictResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="AddDisctrictResult" nillable="true" type="q2:District" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAllDistricts">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryAllDistrictsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="QueryAllDistrictsResult" nillable="true" type="q3:ArrayOfDistrict" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistrictById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="districtId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistrictByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="GetDistrictByIdResult" nillable="true" type="q4:District" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPosition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="info" nillable="true" type="q5:Position" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPositionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="AddPositionResult" nillable="true" type="q6:Position" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPositionByIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="positionIds" nillable="true" type="q7:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPositionByIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="GetPositionByIdsResult" nillable="true" type="q8:ArrayOfPosition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="info" nillable="true" type="q9:Employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="AddEmployeeResult" nillable="true" type="q10:Employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesByShopId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shopId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesByShopIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="GetEmployeesByShopIdResult" nillable="true" type="q11:ArrayOfEmployee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmployeeSale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="info" nillable="true" type="q12:EmployeeSale" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmployeeSaleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="AddEmployeeSaleResult" nillable="true" type="q13:EmployeeSale" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeSalesByEmployeeIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="employeeIds" nillable="true" type="q14:ArrayOflong" />
+        <xs:element minOccurs="0" name="month" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeSalesByEmployeeIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="GetEmployeeSalesByEmployeeIdsResult" nillable="true" type="q15:ArrayOfEmployeeSale" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmployeeTypeSale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="info" nillable="true" type="q16:EmployeeTypeSale" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmployeeTypeSaleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="AddEmployeeTypeSaleResult" nillable="true" type="q17:EmployeeTypeSale" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddShop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="info" nillable="true" type="q18:Shop" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddShopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="AddShopResult" nillable="true" type="q19:Shop" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShopsByDistrictId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="districtId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShopsByDistrictIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="GetShopsByDistrictIdResult" nillable="true" type="q20:ArrayOfShop" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CaculateBonus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="districtId" type="xs:long" />
+        <xs:element minOccurs="0" name="shopId" type="xs:long" />
+        <xs:element minOccurs="0" name="month" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CaculateBonusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="CaculateBonusResult" nillable="true" type="q21:Bonus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewShopCopy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shopId" type="xs:long" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="info" nillable="true" type="q22:Shop" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewShopCopyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewShopCopyResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllShops">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllShopsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="GetAllShopsResult" nillable="true" type="q23:ArrayOfShop" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="info" nillable="true" type="q24:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Logout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogoutResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="info" nillable="true" type="q25:Rule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="AddRuleResult" nillable="true" type="q26:Rule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRulesByShopId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shopId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRulesByShopIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="GetRulesByShopIdResult" nillable="true" type="q27:ArrayOfRule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddShopSale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="info" nillable="true" type="q28:ShopSale" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddShopSaleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/LaPerLa.BusinessModel" minOccurs="0" name="AddShopSaleResult" nillable="true" type="q29:ShopSale" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentMonthShopSale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="shopIds" nillable="true" type="q30:ArrayOflong" />
+        <xs:element minOccurs="0" name="month" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentMonthShopSaleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetCurrentMonthShopSaleResult" nillable="true" type="q31:ArrayOfKeyValueOflongArrayOfShopSaleG6mArm_Pe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

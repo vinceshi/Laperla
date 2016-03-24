@@ -1,0 +1,17 @@
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.Manager.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.Manager.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.BusinessModel.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.DataAccess.EF.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.IMetadataAccess.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.Model.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.Utility.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\log4net.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\EntityFramework.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.BusinessModel.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.DataAccess.EF.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.IMetadataAccess.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.Model.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\bin\Debug\LaPerLa.Utility.pdb
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\obj\Debug\LaPerLa.Manager.csprojResolveAssemblyReference.cache
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\obj\Debug\LaPerLa.Manager.dll
+D:\WorkGroup\LaPerLa\trunk\LaPerLa.Manager\obj\Debug\LaPerLa.Manager.pdb

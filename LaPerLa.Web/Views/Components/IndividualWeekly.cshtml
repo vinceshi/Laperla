@@ -1,0 +1,46 @@
+﻿@using LaPerLa.Web.LaPerLaService;
+@using LaPerLa.Utility;
+@model LaPerLa.Web.Models.StatisticsModel
+@if (Model != null && Model.District != null && Model.Shop != null && Model.EmployeeList != null && Model.EmployeeList.Count > 0 && Model.EmployeeSaleList != null && Model.EmployeeSaleList.Count > 0)
+{
+    <h5>* Individual Weekly</h5>
+    <table class="table hovered bordered">
+        <thead>
+            <tr>
+                <th class="text-left"></th>
+                <th class="text-left">Target</th>
+                <th class="text-left">Actual (Net amount)</th>
+                <th class="text-left"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var weekSale in Model.EmployeeSaleList.GroupBy(p=>p.Week))
+            {
+                var totleWeekTargetSale = weekSale.Sum(p => p.TargetSale);
+                <tr>
+                    <th class="text-left">@string.Format("Week{0}", weekSale.Key)</th>
+                    <th class="text-left">@(totleWeekTargetSale > 0 ? String.Format("{0:N}", totleWeekTargetSale) : "-")</th>
+                    <th class="text-left"></th>
+                    <th class="text-left"></th>
+                </tr>
+                foreach (var employee in Model.EmployeeList)
+                {
+                    var totleTargetSale = weekSale.Where(p => p.EmployeeId == employee.EmployeeId).Sum(p => p.TargetSale);
+                    var totleActualSale = weekSale.Where(p => p.EmployeeId == employee.EmployeeId).Sum(p => p.ActualSale);
+                <tr>
+                    <th class="text-left">@employee.EnglishName</th>
+                    <th class="text-left">@(totleTargetSale > 0 ? String.Format("{0:N}", totleTargetSale) : "-")</th>
+                    <th class="text-left">@(totleActualSale > 0 ? String.Format("{0:N}", totleActualSale) : "-")</th>
+                    <th class="text-left">@(totleActualSale > 0 ? String.Format("{0:N}%", (totleActualSale/totleTargetSale)*100) : "0.00%")</th>
+                </tr>
+                }
+                <tr>
+                    <th class="text-left"></th>
+                    <th class="text-left"></th>
+                    <th class="text-left"></th>
+                    <th class="text-left"></th>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

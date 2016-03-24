@@ -1,0 +1,17 @@
+﻿@using LaPerLa.Web.LaPerLaService;
+@using LaPerLa.Utility;
+@model LaPerLa.Web.Models.StatisticsModel
+@if(Model != null && Model.District != null){
+
+    <h5>@string.Format("La Perla {0} Pte Ltd", Model.District.State)</h5>
+    
+    Html.RenderPartial("~/Views/Components/MonthStatistics.cshtml", Model);
+
+    Html.RenderPartial("~/Views/Components/MonthCommission.cshtml", Model);
+    
+    Html.RenderPartial("~/Views/Components/IndividualTarget.cshtml", Model);
+
+    Html.RenderPartial("~/Views/Components/IndividualWeekly.cshtml", Model);
+}
+
+
