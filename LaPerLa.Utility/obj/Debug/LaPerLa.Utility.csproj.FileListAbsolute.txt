@@ -7,3 +7,12 @@ D:\WorkGroup\LaPerLa\trunk\LaPerLa.Utility\bin\Debug\LaPerLa.Model.pdb
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.Utility\obj\Debug\LaPerLa.Utility.csprojResolveAssemblyReference.cache
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.Utility\obj\Debug\LaPerLa.Utility.dll
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.Utility\obj\Debug\LaPerLa.Utility.pdb
+D:\Projects\Laperla\LaPerLa.Utility\bin\Debug\LaPerLa.Utility.dll
+D:\Projects\Laperla\LaPerLa.Utility\bin\Debug\LaPerLa.Utility.pdb
+D:\Projects\Laperla\LaPerLa.Utility\bin\Debug\LaPerLa.BusinessModel.dll
+D:\Projects\Laperla\LaPerLa.Utility\bin\Debug\LaPerLa.Model.dll
+D:\Projects\Laperla\LaPerLa.Utility\bin\Debug\LaPerLa.BusinessModel.pdb
+D:\Projects\Laperla\LaPerLa.Utility\bin\Debug\LaPerLa.Model.pdb
+D:\Projects\Laperla\LaPerLa.Utility\obj\Debug\LaPerLa.Utility.csprojResolveAssemblyReference.cache
+D:\Projects\Laperla\LaPerLa.Utility\obj\Debug\LaPerLa.Utility.dll
+D:\Projects\Laperla\LaPerLa.Utility\obj\Debug\LaPerLa.Utility.pdb

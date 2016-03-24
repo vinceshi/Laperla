@@ -11,3 +11,16 @@ D:\WorkGroup\LaPerLa\trunk\LaPerLa.UnitTest\bin\Debug\LaPerLa.BusinessModel.pdb
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.UnitTest\obj\Debug\LaPerLa.UnitTest.csprojResolveAssemblyReference.cache
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.UnitTest\obj\Debug\LaPerLa.UnitTest.dll
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.UnitTest\obj\Debug\LaPerLa.UnitTest.pdb
+D:\Projects\Laperla\LaPerLa.UnitTest\bin\Debug\LaPerLa.UnitTest.dll.config
+D:\Projects\Laperla\LaPerLa.UnitTest\bin\Debug\LaPerLa.UnitTest.dll
+D:\Projects\Laperla\LaPerLa.UnitTest\bin\Debug\LaPerLa.UnitTest.pdb
+D:\Projects\Laperla\LaPerLa.UnitTest\bin\Debug\LaPerLa.Utility.dll
+D:\Projects\Laperla\LaPerLa.UnitTest\bin\Debug\nunit.framework.dll
+D:\Projects\Laperla\LaPerLa.UnitTest\bin\Debug\LaPerLa.Model.dll
+D:\Projects\Laperla\LaPerLa.UnitTest\bin\Debug\LaPerLa.BusinessModel.dll
+D:\Projects\Laperla\LaPerLa.UnitTest\bin\Debug\LaPerLa.Utility.pdb
+D:\Projects\Laperla\LaPerLa.UnitTest\bin\Debug\LaPerLa.Model.pdb
+D:\Projects\Laperla\LaPerLa.UnitTest\bin\Debug\LaPerLa.BusinessModel.pdb
+D:\Projects\Laperla\LaPerLa.UnitTest\obj\Debug\LaPerLa.UnitTest.csprojResolveAssemblyReference.cache
+D:\Projects\Laperla\LaPerLa.UnitTest\obj\Debug\LaPerLa.UnitTest.dll
+D:\Projects\Laperla\LaPerLa.UnitTest\obj\Debug\LaPerLa.UnitTest.pdb

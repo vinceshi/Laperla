@@ -10,3 +10,15 @@ D:\WorkGroup\LaPerLa\trunk\LaPerLa.MetadataAccess\bin\Debug\LaPerLa.Model.pdb
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.MetadataAccess\obj\Debug\LaPerLa.MetadataAccess.csprojResolveAssemblyReference.cache
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.MetadataAccess\obj\Debug\LaPerLa.MetadataAccess.dll
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.MetadataAccess\obj\Debug\LaPerLa.MetadataAccess.pdb
+D:\Projects\Laperla\LaPerLa.MetadataAccess\bin\Debug\LaPerLa.MetadataAccess.dll
+D:\Projects\Laperla\LaPerLa.MetadataAccess\bin\Debug\LaPerLa.MetadataAccess.pdb
+D:\Projects\Laperla\LaPerLa.MetadataAccess\bin\Debug\LaPerLa.IMetadataAccess.dll
+D:\Projects\Laperla\LaPerLa.MetadataAccess\bin\Debug\LaPerLa.Model.dll
+D:\Projects\Laperla\LaPerLa.MetadataAccess\bin\Debug\log4net.dll
+D:\Projects\Laperla\LaPerLa.MetadataAccess\bin\Debug\NHibernate.dll
+D:\Projects\Laperla\LaPerLa.MetadataAccess\bin\Debug\Iesi.Collections.dll
+D:\Projects\Laperla\LaPerLa.MetadataAccess\bin\Debug\LaPerLa.IMetadataAccess.pdb
+D:\Projects\Laperla\LaPerLa.MetadataAccess\bin\Debug\LaPerLa.Model.pdb
+D:\Projects\Laperla\LaPerLa.MetadataAccess\obj\Debug\LaPerLa.MetadataAccess.csprojResolveAssemblyReference.cache
+D:\Projects\Laperla\LaPerLa.MetadataAccess\obj\Debug\LaPerLa.MetadataAccess.dll
+D:\Projects\Laperla\LaPerLa.MetadataAccess\obj\Debug\LaPerLa.MetadataAccess.pdb

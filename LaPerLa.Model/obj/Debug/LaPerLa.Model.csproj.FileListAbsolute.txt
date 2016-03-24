@@ -4,3 +4,13 @@ D:\WorkGroup\LaPerLa\trunk\LaPerLa.Model\bin\Debug\LaPerLa.Model.pdb
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.Model\obj\Debug\LaPerLa.Model.csprojResolveAssemblyReference.cache
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.Model\obj\Debug\LaPerLa.Model.dll
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.Model\obj\Debug\LaPerLa.Model.pdb
+D:\Projects\Laperla\LaPerLa.Model\bin\Debug\LaPerLa.Model.dll.config
+D:\Projects\Laperla\LaPerLa.Model\bin\Debug\LaPerLa.Model.dll
+D:\Projects\Laperla\LaPerLa.Model\bin\Debug\LaPerLa.Model.pdb
+D:\Projects\Laperla\LaPerLa.Model\bin\Debug\EntityFramework.dll
+D:\Projects\Laperla\LaPerLa.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Laperla\LaPerLa.Model\bin\Debug\EntityFramework.xml
+D:\Projects\Laperla\LaPerLa.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Laperla\LaPerLa.Model\obj\Debug\LaPerLa.Model.csprojResolveAssemblyReference.cache
+D:\Projects\Laperla\LaPerLa.Model\obj\Debug\LaPerLa.Model.dll
+D:\Projects\Laperla\LaPerLa.Model\obj\Debug\LaPerLa.Model.pdb

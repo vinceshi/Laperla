@@ -2,3 +2,8 @@ D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\bin\Debug\LaPerLa.BusinessModel
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\bin\Debug\LaPerLa.BusinessModel.pdb
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\obj\Debug\LaPerLa.BusinessModel.dll
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\obj\Debug\LaPerLa.BusinessModel.pdb
+D:\Projects\Laperla\LaPerLa.BusinessModel\bin\Debug\LaPerLa.BusinessModel.dll
+D:\Projects\Laperla\LaPerLa.BusinessModel\bin\Debug\LaPerLa.BusinessModel.pdb
+D:\Projects\Laperla\LaPerLa.BusinessModel\obj\Debug\LaPerLa.BusinessModel.csprojResolveAssemblyReference.cache
+D:\Projects\Laperla\LaPerLa.BusinessModel\obj\Debug\LaPerLa.BusinessModel.dll
+D:\Projects\Laperla\LaPerLa.BusinessModel\obj\Debug\LaPerLa.BusinessModel.pdb

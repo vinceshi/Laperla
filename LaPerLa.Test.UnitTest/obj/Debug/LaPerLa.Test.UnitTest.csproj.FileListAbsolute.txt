@@ -3,3 +3,8 @@ D:\WorkGroup\LaPerLa\trunk\LaPerLa.Test.UnitTest\bin\Debug\LaPerLa.Test.UnitTest
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.Test.UnitTest\obj\Debug\LaPerLa.Test.UnitTest.csprojResolveAssemblyReference.cache
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.Test.UnitTest\obj\Debug\LaPerLa.Test.UnitTest.dll
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.Test.UnitTest\obj\Debug\LaPerLa.Test.UnitTest.pdb
+D:\Projects\Laperla\LaPerLa.Test.UnitTest\bin\Debug\LaPerLa.Test.UnitTest.dll
+D:\Projects\Laperla\LaPerLa.Test.UnitTest\bin\Debug\LaPerLa.Test.UnitTest.pdb
+D:\Projects\Laperla\LaPerLa.Test.UnitTest\obj\Debug\LaPerLa.Test.UnitTest.csprojResolveAssemblyReference.cache
+D:\Projects\Laperla\LaPerLa.Test.UnitTest\obj\Debug\LaPerLa.Test.UnitTest.dll
+D:\Projects\Laperla\LaPerLa.Test.UnitTest\obj\Debug\LaPerLa.Test.UnitTest.pdb

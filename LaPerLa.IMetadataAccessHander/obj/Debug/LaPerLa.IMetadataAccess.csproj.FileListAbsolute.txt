@@ -5,3 +5,10 @@ D:\WorkGroup\LaPerLa\trunk\LaPerLa.IMetadataAccessHander\bin\Debug\LaPerLa.Model
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.IMetadataAccessHander\obj\Debug\LaPerLa.IMetadataAccess.csprojResolveAssemblyReference.cache
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.IMetadataAccessHander\obj\Debug\LaPerLa.IMetadataAccess.dll
 D:\WorkGroup\LaPerLa\trunk\LaPerLa.IMetadataAccessHander\obj\Debug\LaPerLa.IMetadataAccess.pdb
+D:\Projects\Laperla\LaPerLa.IMetadataAccessHander\bin\Debug\LaPerLa.IMetadataAccess.dll
+D:\Projects\Laperla\LaPerLa.IMetadataAccessHander\bin\Debug\LaPerLa.IMetadataAccess.pdb
+D:\Projects\Laperla\LaPerLa.IMetadataAccessHander\bin\Debug\LaPerLa.Model.dll
+D:\Projects\Laperla\LaPerLa.IMetadataAccessHander\bin\Debug\LaPerLa.Model.pdb
+D:\Projects\Laperla\LaPerLa.IMetadataAccessHander\obj\Debug\LaPerLa.IMetadataAccess.csprojResolveAssemblyReference.cache
+D:\Projects\Laperla\LaPerLa.IMetadataAccessHander\obj\Debug\LaPerLa.IMetadataAccess.dll
+D:\Projects\Laperla\LaPerLa.IMetadataAccessHander\obj\Debug\LaPerLa.IMetadataAccess.pdb
