@@ -1,7 +1,0 @@
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\bin\Release\LaPerLa.Contract.dll
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\bin\Release\LaPerLa.Contract.pdb
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\bin\Release\LaPerLa.BusinessModel.dll
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\bin\Release\LaPerLa.BusinessModel.pdb
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\obj\Release\LaPerLa.Contract.csprojResolveAssemblyReference.cache
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\obj\Release\LaPerLa.Contract.dll
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.Contract\obj\Release\LaPerLa.Contract.pdb

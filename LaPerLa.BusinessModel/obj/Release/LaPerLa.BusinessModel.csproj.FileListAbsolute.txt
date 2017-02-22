@@ -1,5 +1,0 @@
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\bin\Release\LaPerLa.BusinessModel.dll
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\bin\Release\LaPerLa.BusinessModel.pdb
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\obj\Release\LaPerLa.BusinessModel.csprojResolveAssemblyReference.cache
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\obj\Release\LaPerLa.BusinessModel.dll
-D:\WorkGroup\LaPerLa\trunk\LaPerLa.BusinessModel\obj\Release\LaPerLa.BusinessModel.pdb
